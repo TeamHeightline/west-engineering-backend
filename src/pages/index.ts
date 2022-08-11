@@ -5,6 +5,6 @@ import levelsOfEducationRouter from "./levels-of-education";
 const pageRouter = Router()
 
 pageRouter.use("/professions", professionsRouter)
-pageRouter.use("levels-of-education", levelsOfEducationRouter)
+pageRouter.use("/levels-of-education", levelsOfEducationRouter)
 
 export default pageRouter;
