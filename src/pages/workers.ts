@@ -3,8 +3,8 @@ import prisma from "../../prisma/client";
 
 const workersRouter = Router()
 
-workersRouter.get('/all', (req, res) => {
-    const workers = prisma.wORKER.findMany({
+workersRouter.get('/all', async (req, res) => {
+    const workers = await prisma.wORKER.findMany({
         include: {
             education: true,
             prfession: true,
