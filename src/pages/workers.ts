@@ -17,4 +17,19 @@ workersRouter.get('/all', async (req, res) => {
     res.status(200).json(workers)
 })
 
+workersRouter.post('/update', async (req, res) => {
+    const {id, name, level_of_education_id, profession_id} = req.body
+    const worker = await prisma.wORKER.update({
+        where: {
+            id: Number(id)
+        },
+        data: {
+            name,
+            level_of_education_id,
+            profession_id,
+        }
+    })
+    res.status(200).json(worker)
+})
+
 export default workersRouter;
