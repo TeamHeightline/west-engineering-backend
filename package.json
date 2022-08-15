@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p .",
     "prestart": "npm run build",
-    "start": "node .",
+    "start": "node dist/src/app.js",
     "dev:ts": "nodemon --watch src --exec \"ts-node\" src/app.ts"
   },
   "dependencies": {
